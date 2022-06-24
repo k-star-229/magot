@@ -25,9 +25,21 @@ const getTradingHistory = async (req, res) => {
 
     try {
 
+        // const url = "https://io.dexscreener.com/u/trading-history/recent/bsc/0x5C38Ed8835D1157BAf78C03124d4afE41E2B515C";
+        // var headers = {
+        //     "Access-Control-Allow-Origin": "*",
+        //     "Access-Control-Allow-Methods": "GET, POST, OPTIONS, PUT, PATCH, DELETE, OPTION",
+        //     "Content-Type": "application/json",
+        // };
+
+        // const tradingHistory = await fetch(url, {
+        //     method: "GET",
+        //     mode: "cors",
+        //     headers: headers,
+        // });
         // let tradingHistory = await axios.get(`https://io.dexscreener.com/u/trading-history/recent/${net}/${tokenAddress}`);
 
-        let tradingHistory = await axios.get(`https://io.dexscreener.com/u/chart/bars/bsc/0x5C38Ed8835D1157BAf78C03124d4afE41E2B515C?from=1655619965000&to=1655889905135&res=15&cb=300`);
+        let tradingHistory = await axios.get(`https://io.dexscreener.com/u/trading-history/recent/bsc/0x5C38Ed8835D1157BAf78C03124d4afE41E2B515C`);
 
         res.status(200).json(tradingHistory);
     } catch (err) {

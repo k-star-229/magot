@@ -1,7 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const connectDB = require('./config/db');
-const path = require('path');
 const cors = require('cors');
 
 const app = express();
@@ -9,10 +8,22 @@ const app = express();
 connectDB();
 
 // Init Middleware
-app.use(cors({
-    origin: "*",
-    credentials: true
-  }));
+app.use(cors());
+
+// app.use(function (req, res, next) {
+//   // Website you wish to allow to connect
+//   res.setHeader("Access-Control-Allow-Origin", "*");
+
+//   res.setHeader(
+//     "Access-Control-Allow-Methods",
+//     "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+//   );
+
+//   res.setHeader("Access-Control-Allow-Headers", "origin, content-type, accept");
+
+//   // Pass to next layer of middleware
+//   next();
+// });
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json());
 
