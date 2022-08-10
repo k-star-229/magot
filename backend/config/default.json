@@ -1,5 +1,5 @@
 {
-    "mongoURI": "mongodb+srv://ratomir:kpsecret@cluster0.i6zr7nr.mongodb.net/?retryWrites=true&w=majority",
-    "jwtSecret": "secret",
-    "githubToken": "<yoursecrectaccesstoken>"
-  }
+  "mongoURI": "mongodb+srv://ratomir:kpsecret@cluster0.i6zr7nr.mongodb.net/?retryWrites=true&w=majority",
+  "jwtSecret": "secret",
+  "githubToken": "<yoursecrectaccesstoken>"
+}
